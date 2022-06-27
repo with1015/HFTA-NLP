@@ -12,6 +12,9 @@ from .normalization import LayerNorm
 from .multiheadattention import MultiheadAttention
 from .transformerencoderlayer import TransformerEncoderLayer
 
+from .rnn import RNN
+from .lstm import LSTM
+
 _OPS_MAP = {
     torch.nn.Conv1d: Conv1d,
     torch.nn.Conv2d: Conv2d,
@@ -25,6 +28,8 @@ _OPS_MAP = {
     torch.nn.BatchNorm2d: BatchNorm2d,
     torch.nn.LayerNorm: LayerNorm,
     torch.nn.Embedding: Embedding,
+    torch.nn.RNN: RNN,
+    torch.nn.LSTM: LSTM,
 }
 
 _HFTA_TORCH_IDENTICAL_OPS = {
